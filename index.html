@@ -12,33 +12,37 @@
             <div class="spacer"></div>
             <div id="calcBody">
                 <div>
-                    <button>AC</button>
+                    <p id="input"></p>
+                    <p id="ans"><input type="text" id="answer"></p>
+                </div>
+                <div>
+                    <button id="clear">AC</button>
                     <button>+/-</button>
                     <button>%</button>
                     <button>/</button>
                 </div>
                 <div>
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
-                    <button>*</button>
+                    <button onclick="getNumber(7)">7</button>
+                    <button onclick="getNumber(8)">8</button>
+                    <button onclick="getNumber(9)">9</button>
+                    <button value="*">*</button>
                 </div>
                 <div>
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
-                    <button>-</button>
+                    <button onclick="getNumber(4)">4</button>
+                    <button onclick="getNumber(5)">5</button>
+                    <button onclick="getNumber(6)">6</button>
+                    <button value="-">-</button>
                 </div>
                 <div>
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>+</button>
+                    <button onclick="getNumber(1)">1</button>
+                    <button onclick="getNumber(2)">2</button>
+                    <button onclick="getNumber(3)">3</button>
+                    <button value="+">+</button>
                 </div>
                 <div>
-                    <button>0</button>
+                    <button onclick="getNumber(0)">0</button>
                     <button>.</button>
-                    <button>=</button>
+                    <button value="=">=</button>
                 </div>
                 
             </div>
