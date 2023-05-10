@@ -5,6 +5,7 @@ const previousNum = document.getElementById("prevNum");
 const answer = document.getElementById("answer");
 const clearAll = document.getElementById('clear');
 const equals = document.getElementById("equals");
+const decimal = document.getElementById("decimal");
 
 //clear all button
 clearAll.addEventListener('click', ()=>{
@@ -23,6 +24,16 @@ equals.addEventListener('click', ()=>{
 //Gets button input
 function getNumber(num){
     if(operator === ''){
+
+        if(answer.value !== ''){
+            answer.value = '';
+            previousNum.value = '';
+        }
+        
+        decimal.addEventListener('click', ()=>{
+            decimal.disabled = true;
+        });
+
         inputNum1 += num;
         previousNum.value = inputNum1;
         answer.value = inputNum1;
@@ -73,6 +84,8 @@ function setOperator(op){
     operator = op;
     previousNum.value = inputNum1 + '' +operator;
 
+    decimal.disabled = false;
+
     if(operator === "="){
         inputNum2 = '';
     }
@@ -104,4 +117,5 @@ function calc (){
     inputNum2 = '';
     operator = '';
     answer.value = inputNum1;
+    decimal.disabled = false;
 }
