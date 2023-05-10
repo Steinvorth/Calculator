@@ -6,6 +6,7 @@ const answer = document.getElementById("answer");
 const clearAll = document.getElementById('clear');
 const equals = document.getElementById("equals");
 const decimal = document.getElementById("decimal");
+const lastDel = document.getElementById("delete");
 
 //clear all button
 clearAll.addEventListener('click', ()=>{
@@ -21,6 +22,15 @@ equals.addEventListener('click', ()=>{
     calc();
 })
 
+function del(num){
+    if(num !== ''){
+        num = num.slice(0,-1);
+        console.log("new number1:" + num)
+        previousNum.value = num;
+        answer.value = num;
+    }
+}
+
 //Gets button input
 function getNumber(num){
     if(operator === ''){
@@ -29,10 +39,17 @@ function getNumber(num){
             decimal.disabled = true;
         });
 
+        //Deletes last character Added to the number
+        lastDel.addEventListener('click', ()=>{
+            del(inputNum1);
+        });
+
         inputNum1 += num;
         previousNum.value = inputNum1;
         answer.value = inputNum1;
         console.log("num 1:" + inputNum1)
+
+        
     }
     else{
         inputNum2 += num;
@@ -42,7 +59,7 @@ function getNumber(num){
     }
 }
 
-//Possible Functions
+//Possible Math Functions
 function add(a, b){
     const result = parseFloat(a) + parseFloat(b);
     console.log("sum: " + result)
