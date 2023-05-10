@@ -24,11 +24,6 @@ equals.addEventListener('click', ()=>{
 //Gets button input
 function getNumber(num){
     if(operator === ''){
-
-        if(answer.value !== ''){
-            answer.value = '';
-            previousNum.value = '';
-        }
         
         decimal.addEventListener('click', ()=>{
             decimal.disabled = true;
@@ -45,7 +40,6 @@ function getNumber(num){
         answer.value = inputNum2;
         console.log("num2: " + inputNum2)
     }
-    
 }
 
 //Possible Functions
@@ -116,6 +110,5 @@ function calc (){
     inputNum1 = result.toString();
     inputNum2 = '';
     operator = '';
-    answer.value = inputNum1;
     decimal.disabled = false;
 }
