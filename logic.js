@@ -62,6 +62,12 @@ function divide(a, b){
     return result;
 }
 
+function modulus(a ,b){
+    const result = parseFloat(a) % parseFloat(b);
+    console.log("modulous: " + result);
+    return result;
+}
+
 //Takes operator as input for function calc later 
 function setOperator(op){
     operator = op;
@@ -88,13 +94,14 @@ function calc (){
         case '/':
             result = divide(inputNum1, inputNum2);
             break;
+        case '%':
+            result = modulus(inputNum1, inputNum2);
+            break;
         default:
             result = 0;
     }
     inputNum1 = result.toString();
     inputNum2 = '';
     operator = '';
-    // previousNum.value = inputNum1;
     answer.value = inputNum1;
-
 }
