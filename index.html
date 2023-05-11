@@ -18,34 +18,44 @@
         <div id="calcContainer">
             <div class="spacer"></div>
             <div id="calcBody">
-                <div>
-                    <p id="input"><input type="text" id="prevNum"></p>
-                    <p id="ans"><input type="text" id="answer"></p>
+                
+                <div id="display">
+                    <div class="displayOp">
+                        <p><output id="prevNum"></p>
+                    </div>
+                    <div class="displayAns">
+                        <p><output id="answer"></p>
+                    </div>                  
                 </div>
+
                 <div class="row">
                     <button id="clear" class="modifier">AC</button>
                     <button id="negate" class="modifier">+/-</button>
                     <button class="modifier" onclick="setOperator('%')">%</button>
                     <button id="delete" class="modifier"><span class="material-symbols-outlined">backspace</span></button>
                 </div>
+
                 <div class="row">
                     <button class="number" onclick="getNumber(7)">7</button>
                     <button class="number" onclick="getNumber(8)">8</button>
                     <button class="number" onclick="getNumber(9)">9</button>
-                    <button class="operator" onclick="setOperator('/')">÷</button>
+                    <button class="operator" onclick="setOperator('÷')">÷</button>
                 </div>
+
                 <div class="row">
                     <button class="number" onclick="getNumber(4)">4</button>
                     <button class="number" onclick="getNumber(5)">5</button>
                     <button class="number" onclick="getNumber(6)">6</button>
-                    <button class="operator" onclick="setOperator('*')">×</button>
+                    <button class="operator" onclick="setOperator('×')">×</button>
                 </div>
+
                 <div class="row">
                     <button class="number" onclick="getNumber(1)">1</button>
                     <button class="number" onclick="getNumber(2)">2</button>
                     <button class="number" onclick="getNumber(3)">3</button>
                     <button class="operator" onclick="setOperator('-')">-</button>
                 </div>
+
                 <div class="row">
                     <button class="number" onclick="getNumber(0)">0</button>
                     <button class="number" id="decimal" onclick="getNumber('.')">.</button>

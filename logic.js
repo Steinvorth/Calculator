@@ -114,25 +114,25 @@ function getNumber(num){
 function add(a, b){
     const result = parseFloat(a) + parseFloat(b);
     console.log("sum: " + result)
-    return result;
+    return result.toFixed(3);
 }
 
 function subtract(a, b){
     const result = parseFloat(a) - parseFloat(b);
     console.log("Difference: " + result)
-    return result;
+    return result.toFixed(3);
 }
 
 function multiply(a, b){
     const result = parseFloat(a) * parseFloat(b);
     console.log("Product: " + result);
-    return result;
+    return result.toFixed(3);
 }
 
 function divide(a, b){
     const result = parseFloat(a) / parseFloat(b);
     console.log("dividend: " + result);
-    return result;
+    return result.toFixed(3);
 }
 
 function modulus(a ,b){
@@ -169,10 +169,10 @@ function calc (){
         case '-':
             result = subtract(inputNum1, inputNum2);
             break;
-        case '*':
+        case '×':
             result = multiply(inputNum1, inputNum2);
             break;
-        case '/':
+        case '÷':
             result = divide(inputNum1, inputNum2);
             break;
         case '%':
