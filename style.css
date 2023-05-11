@@ -3,6 +3,7 @@ html{
 }
 button{
     margin: 3px;
+    vertical-align: middle;
 }
 
 html{
@@ -18,7 +19,8 @@ html{
 
 #calcBody{
     display: flex;
-    flex: 1 1 150px;
+    flex: 1 1 auto;
+    max-width: 250px;
     justify-content: center;
     align-items: center;
     border: 2px solid gold;
@@ -68,8 +70,9 @@ html{
   
 .material-symbols-outlined {
     font-family: 'Material Symbols Outlined';
-    font-size: 20px;
-    line-height: 1;
+    height: 24px;
+    /* font-size: 18px;
+    line-height: 1; */
 }
 
 #display{
