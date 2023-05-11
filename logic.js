@@ -92,9 +92,6 @@ function toggleSign(num){
 //Gets Number input
 function getNumber(num){
     if(operator === ''){
-        // decimal.addEventListener('click', ()=>{
-        //     decimal.disabled = true;
-        // });
         inputNum1 += num;
         previousNum.value = inputNum1;
         answer.value = inputNum1;
@@ -114,25 +111,42 @@ function getNumber(num){
 function add(a, b){
     const result = parseFloat(a) + parseFloat(b);
     console.log("sum: " + result)
-    return result.toFixed(3);
+    if(Number.isInteger(result)){
+        return result;
+    }else{
+        return result.toFixed(3);
+    }
 }
 
 function subtract(a, b){
     const result = parseFloat(a) - parseFloat(b);
-    console.log("Difference: " + result)
-    return result.toFixed(3);
+    console.log("Difference: " + result);
+    if(Number.isInteger(result)){
+        return result;
+    }else{
+        return result.toFixed(3);
+    }
+    
 }
 
 function multiply(a, b){
     const result = parseFloat(a) * parseFloat(b);
     console.log("Product: " + result);
-    return result.toFixed(3);
+    if(Number.isInteger(result)){
+        return result;
+    }else{
+        return result.toFixed(3);
+    }
 }
 
 function divide(a, b){
     const result = parseFloat(a) / parseFloat(b);
     console.log("dividend: " + result);
-    return result.toFixed(3);
+    if(Number.isInteger(result)){
+        return result;
+    }else{
+        return result.toFixed(3);
+    }
 }
 
 function modulus(a ,b){
@@ -143,6 +157,11 @@ function modulus(a ,b){
 
 //Takes operator as input for function calc later 
 function setOperator(op){
+    
+    if(answer.value !== ''){
+        inputNum1 = answer.value;
+        inputNum2 = '';
+    }
     if(inputNum1 && inputNum2){
         calc();
         inputNum1 = answer.value;
@@ -181,6 +200,7 @@ function calc (){
         default:
             result = 0;
     }
+
     answer.value = result.toString();
     inputNum1 = '';
     inputNum2 = '';
